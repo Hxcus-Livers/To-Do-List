@@ -1,0 +1,164 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure minimum height is full screen */
+  margin: 0;
+}
+
+/* Container untuk seluruh elemen */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Heading untuk judul aplikasi */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+/* Formulir untuk menambahkan tugas */
+#todo-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input tugas baru */
+#new-task {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  min-width: 0; /* Ensures input shrinks on smaller screens */
+}
+
+/* Tombol untuk menambahkan tugas */
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Daftar tugas */
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Setiap item tugas */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Tugas yang selesai */
+.todo-item.completed {
+  color: #888;
+}
+
+/* Checkbox untuk menandai tugas selesai */
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Tombol untuk menghapus tugas */
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Tombol filter */
+.filters {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6c757d;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: #5a6268;
+}
+.filter-btn.active {
+  background-color: #007bff;
+}
+
+/* Responsiveness */
+@media (max-width: 500px) {
+  /* Adjust padding and font sizes for smaller screens */
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  #todo-form {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #new-task, button {
+    width: 100%; /* Make input and button full width */
+    font-size: 0.9em;
+  }
+
+  .todo-item {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .filter-btn {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
